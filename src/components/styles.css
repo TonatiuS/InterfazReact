@@ -63,9 +63,13 @@
     height: 45%;
     width: 45%;
   }
+  .image{
+    height: 50%;
+    width: 50%;
+  }
   .image3{
-    height: 75%;
-    width: 75%;
+    height: 85%;
+    width: 85%;
     margin-right: 8%;
   }
   .subtitle-delegacion{
@@ -102,7 +106,9 @@
     align-items:center;
   }
   .tolbar-text{
-    font-size: 25px;
+    font-size: 20px;
+    white-space: normal;
+    
   }
   .margin-15px{
     margin-top: 25px;

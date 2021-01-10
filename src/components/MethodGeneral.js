@@ -17,7 +17,7 @@ class MethodGeneral extends React.Component {
           <p className="centerMap2 more-info " > {this.props.datos} </p>
           <p className="centerMap2 more-info " >  MSE 11.946</p>
         </div> */}
-          <img className="" src={this.props.img} />
+          <img className="image" src={this.props.img} />
           <img  className="image3" src={this.props.img1} />
           <img className="image2" src={this.props.img2} />
       </>
