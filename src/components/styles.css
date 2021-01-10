@@ -72,3 +72,19 @@
   .subtitle-delegacion{
     font-size: 25px;
   }
+
+  .section-full{
+    width: 100%;
+    margin-bottom:30px ;
+  }
+  .section-text{
+    font-size: 28px;
+  }
+  .section-Subtext{
+    font-size: 20px;
+  }
+  .section-border{
+    border-radius: 0.02px;
+    border-color: red;
+
+  }

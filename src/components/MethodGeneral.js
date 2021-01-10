@@ -13,11 +13,11 @@ class MethodGeneral extends React.Component {
         <h1 className="tittle-delegacion" >{this.props.alcaldia}</h1>
         <p className="tittle-delegacion" >Delito: {this.props.delito} </p>
         <p className="subtitle-delegacion">predicción de homicidios intencionales empleando {this.props.metodo} </p>
-        <div>
+        {/* <div>
           <p className="centerMap2 more-info " > {this.props.datos} </p>
           <p className="centerMap2 more-info " >  MSE 11.946</p>
+        </div> */}
           <img className="" src={this.props.img} />
-        </div>
           <img  className="image3" src={this.props.img1} />
       </>
     )
