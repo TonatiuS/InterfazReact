@@ -21,8 +21,8 @@ export const Home = () => {
   const CoyoacanImg= '/Coyoacan.png'
   const CoyoacanImg2= '/Coyoacan2.png'
   const CoyoacanImg3= ''
-  const CuauhtemocImg = '/Cuahuatemoc.png'
-  const CuauhtemocImg2 = '/Cuahuatemoc2.png'
+  const CuauhtemocImg = '/Cuahutemoc2.png'
+  const CuauhtemocImg2 = '/Cuahuatemoc.png'
   const CuauhtemocImg3 = '/Cuahuatemoc3.png'
   const CuajimalplaImg = '/Cuaji.png'
   const CuajimalplaImg2 = '/Cuaji2.png'
@@ -155,8 +155,8 @@ useEffect(() => {
               delito= 'Lesiones'
               metodo= 'análisis estadístico'
               datos= ' Correlación máxima 0.337'
-              img=  {AlvaroImg}
-              img1= {AlvaroImg2}
+              img=  {AlvaroImg2}
+              img1= {AlvaroImg}
               img2= {AlvaroImg3}
             /> 
           </> 
@@ -169,8 +169,8 @@ useEffect(() => {
               delito= 'Lesiones'
               metodo= 'análisis estadístico y regresiones lineales'
               datos= ' Correlación máxima 0.337'
-              img=  {AzcapotzalcoImg}
-              img1= {AzcapotzalcoImg2}
+              img=  {AzcapotzalcoImg2}
+              img1= {AzcapotzalcoImg}
               img2= {AzcapotzalcoImg3}
             /> 
           </> 
@@ -179,7 +179,7 @@ useEffect(() => {
           <>
             <MethodGeneral 
               alcaldia= 'Benito Juarez'
-              delito= 'Robo'
+              delito= 'Lesiones'
               metodo= 'análisis estadístico y regresiones lineales'
               datos= ' Correlación máxima 0.337'
               img=  {BenitoImg}
@@ -193,7 +193,7 @@ useEffect(() => {
           <>
             <MethodGeneral 
               alcaldia= 'Coyoacán'
-              delito= 'Robo'
+              delito= 'Amenaza'
               metodo= 'análisis estadístico y regresiones lineales'
               datos= ' Correlación máxima 0.337'
               img=  {CoyoacanImg}
@@ -207,7 +207,7 @@ useEffect(() => {
           <>
             <MethodGeneral 
               alcaldia= 'Cuajimalpa de Morelos'
-              delito= 'Robo'
+              delito= 'Amenaza'
               metodo= 'análisis estadístico y regresiones lineales'
               datos= ' Correlación máxima 0.337'
               img=  {CuajimalplaImg}
@@ -220,7 +220,7 @@ useEffect(() => {
           <>
             <MethodGeneral 
               alcaldia= 'Cuauhtémoc'
-              delito= 'Robo'
+              delito= 'Violacion Simple'
               metodo= 'análisis estadístico y regresiones lineales'
               datos= ' Correlación máxima 0.337'
               img=  {CuauhtemocImg}
@@ -285,7 +285,7 @@ useEffect(() => {
           <>
             <MethodGeneral 
               alcaldia= 'Miguel Hidalgo'
-              delito= 'Robo'
+              delito= 'Lesiones'
               metodo= 'análisis estadístico y regresiones lineales'
               datos= ' Correlación máxima 0.337'
               img=  {MiguelImg}
@@ -350,7 +350,7 @@ useEffect(() => {
           <>
             <MethodGeneral 
               alcaldia= 'Xochimilco'
-              delito= 'Robo'
+              delito= 'Amenaza'
               metodo= 'análisis estadístico y regresiones lineales'
               datos= ' Correlación máxima 0.337'
               img=  {XochiImg}
