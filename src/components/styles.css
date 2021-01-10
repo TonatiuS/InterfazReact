@@ -1,0 +1,74 @@
+
+  
+  .jumbotron {
+    padding-top: var(--jumbotron-padding-y);
+    padding-bottom: var(--jumbotron-padding-y);
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+  @media (min-width: 768px) {
+    .jumbotron {
+      padding-top: calc(var(--jumbotron-padding-y) * 2);
+      padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+    }
+  }
+  
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .jumbotron-heading {
+    font-weight: 300;
+  }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  footer p {
+    margin-bottom: .25rem;
+  }
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+  .centerMap {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+  .centerMap2 {
+    display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+  justify-content: flex-end;
+  }
+  .more-info{
+    margin-top: 25px;
+    margin-bottom: -10px;
+    font-size: 30px;
+    color: red;
+  }
+  .tittle-delegacion{
+    font-size: 50px;
+    font-weight: 800;
+    
+  }
+  .image2{
+  
+    height: 130%;
+    width: 130%;
+  }
+  .image3{
+  
+    height: 55%;
+    width: 55%;
+  }
+  .subtitle-delegacion{
+    font-size: 25px;
+  }
