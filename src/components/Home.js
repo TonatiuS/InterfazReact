@@ -111,7 +111,7 @@ export const Home = () => {
           <div className="container tolbar-text d-flex justify-content-between">
             <img className="icon-toolbar tolbar" src={'/ipn.png'} />
             <a href="#" className=" navbar-brand d-flex align-items-center ">
-              <strong className="tolbar-text" >Predicción de Homicidios Intencionales Empleando Análisis Estadístico y Regresiones Lineales
+              <strong className="tolbar-text" >PREDICCION DE HOMICIDIOS INTENCIONALES EMPLEANDO ANALISIS DE CORRELACIONES Y REGRESIONES LINEALES
               </strong>
             </a>
             <img className="icon-toolbar2" src={'/esime.png'} />
@@ -168,7 +168,7 @@ export const Home = () => {
             {delegacion === 'Alvaro' &&
               <>
                 <h1 className="tittle-delegacion" >Alvaro Obregon</h1>
-                <p className="tittle-delegacion" >Delito: Lesiones </p>
+                <p className="tittle-delegacion" >Delito: Robo </p>
                 <div className="card-border" >
                   <CardDeck  >
                     <MethodGeneral
@@ -289,8 +289,7 @@ export const Home = () => {
             {delegacion === 'Cuajimalpa' &&
               <>
                 <h1 className="tittle-delegacion" >Cuajimalpa de Morelos</h1>
-                <p className="tittle-delegacion" >Delito: info='Amenaza'
-                      info2='Robo' </p>
+                <p className="tittle-delegacion" >Delito: Amenaza </p>
                 <div className="card-border" >
                   <CardDeck  >
                     <MethodGeneral
@@ -318,7 +317,7 @@ export const Home = () => {
             {delegacion === 'Cuauhtemoc' &&
               <>
                 <h1 className="tittle-delegacion" >Cuauhtémoc</h1>
-                <p className="tittle-delegacion" >Delito: Lesiones </p>
+                <p className="tittle-delegacion" >Delito: Violacion simple </p>
                 <div className="card-border" >
                   <CardDeck  >
                     <MethodGeneral
@@ -335,7 +334,7 @@ export const Home = () => {
                       img={CuauhtemocImg}
                     />
                     <MethodAnalisis
-                      info='Violasion simple'
+                      info='Violacion simple'
                       info2='Amenaza'
                       img={CuauhtemocImg3}
                     />
@@ -605,7 +604,7 @@ export const Home = () => {
             {delegacion === 'Xochimilco' &&
               <>
                 <h1 className="tittle-delegacion" >Xochimilco</h1>
-                <p className="tittle-delegacion" >Delito: Amenaza </p>
+                <p className="tittle-delegacion" >Delito: Robo </p>
                 <div className="card-border" >
                   <CardDeck  >
                     <MethodGeneral
