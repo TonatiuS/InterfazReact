@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import './styles.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import 'bootswatch/dist/lux/bootstrap.min.css'
+import Carousel from 'react-bootstrap/Carousel'
+import Card from 'react-bootstrap/Card'
+import CardDeck from 'react-bootstrap/CardDeck'
 import MethodGeneral from './MethodGeneral'
 import MethodRegresion from './Regresion'
 import MethodAnalisis from './MetodoAnalisis'
@@ -10,6 +13,12 @@ export const Home = () => {
 
   const [delegacion, setDelegacion] = useState("");
   const [metodo, setMetodo] = useState("");
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   const AzcapotzalcoImg = '/azcapotzalco.png'
   const AzcapotzalcoImg2 = '/azcapotzalco2.png'
   const AzcapotzalcoImg3 = '/azcapotzalco3.png'
@@ -107,12 +116,12 @@ export const Home = () => {
       <header>
         <div className="navbar navbar-dark bg-dark box-shadow">
           <div className="container tolbar-text d-flex justify-content-between">
-              <img className="icon-toolbar tolbar" src={'/ipn.png'} />
+            <img className="icon-toolbar tolbar" src={'/ipn.png'} />
             <a href="#" className=" navbar-brand d-flex align-items-center ">
               <strong className="tolbar-text" >Predicción de Homicidios Intencionales Empleando Análisis Estadístico y Regresiones Lineales
               </strong>
             </a>
-              <img className="icon-toolbar2" src={'/esime.png'} />
+            <img className="icon-toolbar2" src={'/esime.png'} />
 
           </div>
         </div>
@@ -157,46 +166,6 @@ export const Home = () => {
           </div>
         </section>
 
-        <>
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src={'/Censura.jpg'} class="d-block w-100" alt="..."/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src={AlvaroImg2} class="d-block w-100" alt="..."/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src={AlvaroImg3} class="d-block w-100" alt="..."/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-        </>
 
 
         <div className="album py-5 bg-light centerMap" >
@@ -205,34 +174,38 @@ export const Home = () => {
 
             {delegacion === 'Alvaro' &&
               <>
-                {metodo === 'prediccion' &&
-                  <MethodGeneral
-                    alcaldia='Alvaro Obregon'
-                    delito='Lesiones'
-                    metodo='Análisis estadístico y Regresiones lineales'
-                    datos=' Correlación máxima 0.337'
-                    img={AlvaroImg2}
-                    img1={AlvaroImg}
-                    img2={AlvaroImg3}
-                  />}
-                {metodo === 'regresiones' &&
-                  <MethodRegresion
-                    alcaldia='Alvaro Obregon'
-                    delito='Lesiones'
-                    metodo='Regresiones Lineales'
-                    datos=' Correlación máxima 0.337'
-                    img={AlvaroImg2}
-                  />}
-                {metodo  === 'analisis' &&
+                <h1 className="tittle-delegacion" >Alvaro Obregon</h1>
+                <p className="tittle-delegacion" >Delito: Lesiones </p>
+                <>
+                  <div className="card-border" >
+                    <CardDeck  >
+                      <MethodGeneral
+                        metodo='Analisis'
+                        datos=' MSE 32.1'
+                        datos2=' Correlación máxima 0.337'
+                        info='infornacion q poner'
+                        info2='infornacion q poner'
+                        img={AlvaroImg}
+                      />
+                      <MethodRegresion
+                        metodo='Regresiones Lineales'
+                        datos=' Correlación máxima 0.337'
+                        info='infornacion q poner'
+                        info2='infornacion q poner'
+                        img={AlvaroImg2}
+                      />
                   <MethodAnalisis
-                  alcaldia='Alvaro Obregon'
-                  delito='Analisis'
-                  metodo='análisis estadístico'
-                  datos=' Correlación máxima 0.337'
-                  img={AlvaroImg}
-                  />
-
-                }
+                    alcaldia='Alvaro Obregon'
+                    delito='Analisis'
+                    info='infornacion q poner'
+                    info2='infornacion q poner'
+                    metodo='análisis estadístico'
+                    datos=' Correlación máxima 0.337'
+                    img={AlvaroImg3}
+                  />       
+                    </CardDeck>
+                  </div>
+                </>
               </>
             }
 

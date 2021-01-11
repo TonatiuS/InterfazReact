@@ -113,3 +113,34 @@
   .margin-15px{
     margin-top: 25px;
   }
+
+  .card-tittleContainer{
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .card-border{
+   margin-left: 25px;
+   margin-right: 25px;
+  }
+  .card-tittle{
+    font-size: 25px;
+    color: rgba(90, 5, 5, 0.952);
+    font-weight:900;
+    text-align: center;
+  }
+  .card-Text{
+    margin-top: 35%;
+  }
+
+  .card-imag{
+    width: 170%;
+    margin-left: -45%;
+  }
+  .card-imag2{
+    width: 93%;
+    height: 120%;
+    margin-left: 17px;
+    margin-top: 10%;
+    align-items: center;
+  }
