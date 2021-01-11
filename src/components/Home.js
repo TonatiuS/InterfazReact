@@ -13,12 +13,6 @@ export const Home = () => {
 
   const [delegacion, setDelegacion] = useState("");
   const [metodo, setMetodo] = useState("");
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
   const AzcapotzalcoImg = '/azcapotzalco.png'
   const AzcapotzalcoImg2 = '/azcapotzalco2.png'
   const AzcapotzalcoImg3 = '/azcapotzalco3.png'
@@ -77,7 +71,6 @@ export const Home = () => {
       default:
         break;
     }
-
   }
 
   const _updateData = event => {
@@ -131,7 +124,7 @@ export const Home = () => {
           <div className=" ">
             <h1 className="jumbotron-heading">Prediccion de Alcaldias</h1>
             <p className="lead text-muted ">En la actualidad, el crimen siempre ha sido un tema sensible para la sociedad y afecta de manera directa la vida diaria y el desarrollo de la misma, por ello, crear una herramienta que ayude a resolver el problema es de suma importancia.</p>
-            <div class="form-group section-full">
+            {/* <div class="form-group section-full">
               <label for="exampleFormControlSelect1" className="section-text" >Seleccione Metodo</label>
               <select onChange={_handleMetodo} class="form-control " id="exampleFormControlSelect1" placeholder={'Seleccione una opcion'}  >
                 <option className="section-Subtext" >Seleccione una opcion </option>
@@ -139,13 +132,13 @@ export const Home = () => {
                 <option>  Analisis estadistico </option>
                 <option>  Regresiones lineales </option>
               </select>
-            </div>
+            </div> */}
 
 
-            <div class="form-group">
+            <div class="form-group margin-Section">
               <label for="exampleFormControlSelect1" className="section-text" >Seleccione Delegacion</label>
               <select onChange={_updateData} class="form-control" id="exampleFormControlSelect1">
-                <option>Seleccione una opcion</option>
+                <option>Delegacion</option>
                 <option>Alvaro Obregon</option>
                 <option>Azcapotzalco</option>
                 <option>Benito Juarez</option>
@@ -176,234 +169,465 @@ export const Home = () => {
               <>
                 <h1 className="tittle-delegacion" >Alvaro Obregon</h1>
                 <p className="tittle-delegacion" >Delito: Lesiones </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='MSE: 11.946'
+                      datos2=' Correlación máxima 0.337'
+                      // info='infornacion q poner'
+                      // info2='infornacion q poner'
+                      img={AlvaroImg}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      info='Robo'
+                      info2='Violacion Equiparada'
+                      img={AlvaroImg2}
+                    />
+                    <MethodAnalisis
+                      info='Robo'
+                      info2='Violacion Equiparada'
+                      img={AlvaroImg3}
+                    />
+                  </CardDeck>
+                </div>
+              </>
+            }
+
+            {delegacion === 'Azcapotzalco' &&
+
+              <>
                 <>
+                  <h1 className="tittle-delegacion" >Azcapotzalco</h1>
+                  <p className="tittle-delegacion" >Delito: Lesiones </p>
                   <div className="card-border" >
                     <CardDeck  >
                       <MethodGeneral
                         metodo='Analisis'
-                        datos=' MSE 32.1'
-                        datos2=' Correlación máxima 0.337'
+                        datos='MSE: 0.141'
+                        datos2='Correlación máxima 7.519'
                         info='infornacion q poner'
                         info2='infornacion q poner'
-                        img={AlvaroImg}
+                        img={AzcapotzalcoImg}
+                      />
+                      <MethodRegresion
+                        metodo='Regresiones Lineales'
+                        img={AzcapotzalcoImg2}
+                      />
+                      <MethodAnalisis
+                        info='Lesiones'
+                        info2='Robo'
+                        img={AzcapotzalcoImg3}
+                      />
+                    </CardDeck>
+                  </div>
+                </>
+              </>
+            }
+            {delegacion === 'Benito' &&
+              <>
+                <>
+                  <h1 className="tittle-delegacion" >Benito Juarez</h1>
+                  <p className="tittle-delegacion" >Delito: Lesiones </p>
+                  <div className="card-border" >
+                    <CardDeck  >
+                      <MethodGeneral
+                        datos='MSE: 4.998'
+                        datos2='Correlación máxima 7.519'
+                        info='infornacion q poner'
+                        info2='infornacion q poner'
+                        img={BenitoImg2}
                       />
                       <MethodRegresion
                         metodo='Regresiones Lineales'
                         datos=' Correlación máxima 0.337'
                         info='infornacion q poner'
                         info2='infornacion q poner'
-                        img={AlvaroImg2}
+                        img={BenitoImg}
                       />
-                  <MethodAnalisis
-                    alcaldia='Alvaro Obregon'
-                    delito='Analisis'
-                    info='infornacion q poner'
-                    info2='infornacion q poner'
-                    metodo='análisis estadístico'
-                    datos=' Correlación máxima 0.337'
-                    img={AlvaroImg3}
-                  />       
+                      <MethodAnalisis
+                        info='Lesiones'
+                        info2='Amenaza'
+                        img={BenitoImg3}
+                      />
                     </CardDeck>
                   </div>
                 </>
               </>
             }
 
-            {delegacion === 'Azcapotzalco' &&
-              <>
-                <MethodGeneral
-                  alcaldia='Azcapotzalco'
-                  delito='Lesiones'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={AzcapotzalcoImg2}
-                  img1={AzcapotzalcoImg}
-                  img2={AzcapotzalcoImg3}
-                />
-              </>
-            }
-            {delegacion === 'Benito' &&
-              <>
-                <MethodGeneral
-                  alcaldia='Benito Juarez'
-                  delito='Lesiones'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={BenitoImg}
-                  img1={BenitoImg2}
-                  img2={BenitoImg3}
-                />
-              </>
-            }
-
             {delegacion === 'Coyoacan' &&
               <>
-                <MethodGeneral
-                  alcaldia='Coyoacán'
-                  delito='Amenaza'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={CoyoacanImg}
-                  img1={CoyoacanImg2}
-                  img2={CoyoacanImg3}
-                />
+                <h1 className="tittle-delegacion" >Coyoacán</h1>
+                <p className="tittle-delegacion" >Delito: Amenaza </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima:  0.212'
+                      datos2='MSE : 6.563'
+                      img={CoyoacanImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={CoyoacanImg}
+                    />
+                    <MethodAnalisis
+                      info='Amenaza'
+                      info2='Robo'
+                      img={CoyoacanImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
 
             {delegacion === 'Cuajimalpa' &&
               <>
-                <MethodGeneral
-                  alcaldia='Cuajimalpa de Morelos'
-                  delito='Amenaza'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={CuajimalplaImg}
-                  img1={CuajimalplaImg2}
-                  img2={CuajimalplaImg3}
-                />
+                <h1 className="tittle-delegacion" >Cuajimalpa de Morelos</h1>
+                <p className="tittle-delegacion" >Delito: info='Amenaza'
+                      info2='Robo' </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.216'
+                        datos2='MSE: 2.364'
+                      img={CuajimalplaImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={CuajimalplaImg}
+                    />
+                    <MethodAnalisis
+                      info='Amenaza'
+                      info2='Robo'
+                      img={CuajimalplaImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
             {delegacion === 'Cuauhtemoc' &&
               <>
-                <MethodGeneral
-                  alcaldia='Cuauhtémoc'
-                  delito='Violacion Simple'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={CuauhtemocImg}
-                  img1={CuauhtemocImg2}
-                  img2={CuauhtemocImg3}
-                />
+                <h1 className="tittle-delegacion" >Cuauhtémoc</h1>
+                <p className="tittle-delegacion" >Delito: Lesiones </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.109'
+                        datos2='Mse: 7.519'
+                      img={CuauhtemocImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={CuauhtemocImg}
+                    />
+                    <MethodAnalisis
+                      info='Violasion simple'
+                      info2='Amenaza'
+                      img={CuauhtemocImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
             {delegacion === 'Gustavo' &&
               <>
-                <MethodGeneral
-                  alcaldia='Gustavo A. Madero'
-                  delito='Robo'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={GustavoImg}
-                  img1={GustavoImg2}
-                  img2={GustavoImg3}
-                />
+                <h1 className="tittle-delegacion" >Gustavo A. Madero</h1>
+                <p className="tittle-delegacion" >Delito: Robo </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.369'
+                      datos2='Mse: 25.542'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={GustavoImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={GustavoImg}
+                    />
+                    <MethodAnalisis
+                      info='Robo'
+                      info2='N/A'
+                      img={GustavoImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
             {delegacion === 'Iztacalco' &&
               <>
-                <MethodGeneral
-                  alcaldia='Iztacalco'
-                  delito='Robo'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={IztacalcoImg}
-                  img1={IztacalcoImg2}
-                  img2={IztacalcoImg3}
-                />
+                <h1 className="tittle-delegacion" >Iztacalco</h1>
+                <p className="tittle-delegacion" >Delito: Robo </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.121'
+                      datos2='Mse: 6.351'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={IztacalcoImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={IztacalcoImg}
+                    />
+                    <MethodAnalisis
+                      info='Robo'
+                      info2='Lesiones'
+                      img={IztacalcoImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
             {delegacion === 'Iztapalapa' &&
               <>
-                <MethodGeneral
-                  alcaldia='Iztapalapa'
-                  delito='Robo'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={IztapalapaImg}
-                  img1={IztapalapaImg2}
-                  img2={IztapalapaImg3}
-                />
+                <h1 className="tittle-delegacion" >Iztapalapa</h1>
+                <p className="tittle-delegacion" >Delito: Robo </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.490'
+                      datos2='Mse: 51.761'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={IztapalapaImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={IztapalapaImg}
+                    />
+                    <MethodAnalisis
+                      info='Robo'
+                      info2='N/A'
+                      img={IztapalapaImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
             {delegacion === 'Magdalena Contreras' &&
               <>
-                <MethodGeneral
-                  alcaldia='Magdalena Contreras'
-                  delito='Robo'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={MagdalenaImg}
-                  img1={MagdalenaImg2}
-                  img2={MagdalenaImg3}
-                />
+                <h1 className="tittle-delegacion" >Magdalena Contreras</h1>
+                <p className="tittle-delegacion" >Delito: Robo </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.267'
+                      datos2='Mse: 2.105'
+                      img={MagdalenaImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={MagdalenaImg}
+                    />
+                    <MethodAnalisis
+                      info='Robo'
+                      info2='Violacion equiparada'
+                      img={MagdalenaImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
             {delegacion === 'Miguel Hidalgo' &&
               <>
-                <MethodGeneral
-                  alcaldia='Miguel Hidalgo'
-                  delito='Lesiones'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={MiguelImg}
-                  img1={MiguelImg2}
-                  img2={MiguelImg3}
-                />
+                <h1 className="tittle-delegacion" >Miguel Hidalgo</h1>
+                <p className="tittle-delegacion" >Delito: Lesiones </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.175'
+                      datos2='Mse: 7.931'
+                      img={MiguelImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={MiguelImg}
+                    />
+                    <MethodAnalisis
+                      info='Lesiones'
+                      info2='Violacion equiparada'
+                      img={MiguelImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
             {delegacion === 'Milpa Alta' &&
               <>
-                <MethodGeneral
-                  alcaldia='Milpa Alta'
-                  delito='Robo'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={MilpalltaImg}
-                  img1={MilpalltaImg2}
-                  img2={MilpalltaImg3}
-                />
+                <h1 className="tittle-delegacion" >Milpa Alta</h1>
+                <p className="tittle-delegacion" >Delito: Robo </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.152'
+                      datos2='Mse: 2.079'
+                      img={MilpalltaImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={MilpalltaImg}
+                    />
+                    <MethodAnalisis
+                 info='Robo'
+                 info2='Violacion equiparada'
+                      img={MilpalltaImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
             {delegacion === 'Tlahuac' &&
               <>
-                <MethodGeneral
-                  alcaldia='Tláhuac'
-                  delito='Robo'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={TlahuacImg}
-                  img1={TlahuacImg2}
-                  img2={TlahuacImg3}
-                />
+                <h1 className="tittle-delegacion" >Tláhuac</h1>
+                <p className="tittle-delegacion" >Delito: Robo </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.536'
+                      datos2='Mse: 5.576'
+                      img={TlahuacImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={TlahuacImg}
+                    />
+                    <MethodAnalisis
+                      info='Robo'
+                      info2='N/A'
+                      img={TlahuacImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
             {delegacion === 'Tlalpan' &&
               <>
-                <MethodGeneral
-                  alcaldia='Tlalpan'
-                  delito='Robo'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={TlalpanImg}
-                  img1={TlalpanImg2}
-                  img2={TlalpanImg3}
-                />
+                <h1 className="tittle-delegacion" >Tlalpan</h1>
+                <p className="tittle-delegacion" >Delito: Robo </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.422'
+                      datos2='Mse: 15.882'
+                      img={TlalpanImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={TlalpanImg}
+                    />
+                    <MethodAnalisis
+                      info='Robo'
+                      info2='N/A'
+                      img={TlalpanImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
             {delegacion === 'Venustiano Carranza' &&
               <>
-                <MethodGeneral
-                  alcaldia='Venustiano Carranza'
-                  delito='Robo'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={VenustianoImg}
-                  img1={VenustianoImg2}
-                  img2={VenustianoImg3}
-                />
+                <h1 className="tittle-delegacion" >Venustiano Carranza</h1>
+                <p className="tittle-delegacion" >Delito: Robo </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.2.36'
+                      datos2='Mse: 20.221'
+                      img={VenustianoImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={VenustianoImg}
+                    />
+                    <MethodAnalisis
+                      
+                      info='Robo'
+                      info2='Amenaza'
+                      img={VenustianoImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
             {delegacion === 'Xochimilco' &&
               <>
-                <MethodGeneral
-                  alcaldia='Xochimilco'
-                  delito='Amenaza'
-                  metodo='análisis estadístico y regresiones lineales'
-                  datos=' Correlación máxima 0.337'
-                  img={XochiImg}
-                  img1={XochiImg2}
-                  img2={XochiImg3}
-                />
+                <h1 className="tittle-delegacion" >Xochimilco</h1>
+                <p className="tittle-delegacion" >Delito: Amenaza </p>
+                <div className="card-border" >
+                  <CardDeck  >
+                    <MethodGeneral
+                      metodo='Analisis'
+                      datos='Correlación máxima: 0.302'
+                      datos2='Mse: 5.400'
+                      img={XochiImg2}
+                    />
+                    <MethodRegresion
+                      metodo='Regresiones Lineales'
+                      datos=' Correlación máxima 0.337'
+                      info='infornacion q poner'
+                      info2='infornacion q poner'
+                      img={XochiImg}
+                    />
+                    <MethodAnalisis
+                      info='Robo'
+                      info2='Amenaza'
+                      img={XochiImg3}
+                    />
+                  </CardDeck>
+                </div>
               </>
             }
 

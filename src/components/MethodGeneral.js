@@ -12,21 +12,20 @@ class MethodGeneral extends React.Component {
       <>
         <Card border="dark" >
           <Card.Title className="card-tittleContainer" >
-            <div className="card-tittle">{this.props.metodo}</div>
+            <div className="card-tittle">{'Análisis estadístico'}</div>
           </Card.Title>
           <div className="" >
             <img class="card-img-top " src={this.props.img} alt="Card image cap"></img>
           </div>
           <Card.Body>
             <Card.Text>
-              <p> {this.props.info} </p>
-              <br/> 
-              <p> {this.props.info2} </p>
+              <p className="card-bodyText" > {this.props.datos} </p>
+              <p className="card-bodyText2" >    {this.props.datos2} </p>
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className="text-muted"> {this.props.datos} </small> <br />
-            <small className="text-muted">{this.props.datos2}</small>
+            {/* <small className="text-muted"> {this.props.info} </small> 
+            <small className="text-muted">{this.props.info2}</small> */}
           </Card.Footer>
         </Card>
       </>

@@ -13,21 +13,20 @@ class MethodRegresion extends React.Component {
       <>
         <Card border="dark" >
           <Card.Title className="card-tittleContainer" >
-            <div className="card-tittle">{this.props.metodo}</div>
+            <div className="card-tittle">{"Regresion Lineal"}</div>
           </Card.Title>
           <div className="" >
             <Card.Img variant="top" className="" src={this.props.img} />
           </div>
           <Card.Body>
             <Card.Text>
-              <p> {this.props.info} </p>
-              <br/> 
-              <p> {this.props.info2} </p>
+              {/* <p> {this.props.info} </p>
+              <p> {this.props.info2} </p> */}
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className="text-muted"> {this.props.datos} </small> <br />
-            <small className="text-muted">{this.props.datos2}</small>
+            {/* <small className="text-muted"> {this.props.datos} </small> <br />
+            <small className="text-muted">{this.props.datos2}</small> */}
           </Card.Footer>
         </Card>
       </>
