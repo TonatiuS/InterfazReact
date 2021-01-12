@@ -61,6 +61,7 @@ export const Home = () => {
   const XochiImg = '/Xochi.png'
   const XochiImg2 = '/Xochi2.png'
   const XochiImg3 = '/Xochimilco3.png'
+  const prueba = '/matriz.png'
 
 
   const _handleMetodo = event => {
@@ -122,7 +123,7 @@ export const Home = () => {
       <main role="main">
         <section className="jumbotron text-center margin-15px container">
           <div className=" ">
-            <h1 className="jumbotron-heading">Prediccion de Alcaldias</h1>
+            <h1 className="jumbotron-heading">Sistema final</h1>
             <p className="lead text-muted ">En la actualidad, el crimen siempre ha sido un tema sensible para la sociedad y afecta de manera directa la vida diaria y el desarrollo de la misma, por ello, crear una herramienta que ayude a resolver el problema es de suma importancia.</p>
             {/* <div class="form-group section-full">
               <label for="exampleFormControlSelect1" className="section-text" >Seleccione Metodo</label>
@@ -136,7 +137,7 @@ export const Home = () => {
 
 
             <div class="form-group margin-Section">
-              <label for="exampleFormControlSelect1" className="section-text" >Seleccione Delegacion</label>
+              <label for="exampleFormControlSelect1" className="section-text" >Seleccione alcaldía</label>
               <select onChange={_updateData} class="form-control" id="exampleFormControlSelect1">
                 <option>Delegacion</option>
                 <option>Alvaro Obregon</option>
@@ -150,6 +151,7 @@ export const Home = () => {
                 <option>Iztapalapa</option>
                 <option>Magdalena Contreras</option>
                 <option>Miguel Hidalgo</option>
+                <option>Milpa Alta</option>
                 <option>Tlahuac</option>
                 <option>Tlalpan</option>
                 <option>Venustiano Carranza</option>
@@ -173,16 +175,14 @@ export const Home = () => {
                   <CardDeck  >
                     <MethodGeneral
                       metodo='Analisis'
-                      datos='MSE: 11.946'
-                      datos2=' Correlación máxima 0.337'
+                      datos=' Correlación máxima 0.337'
                       // info='infornacion q poner'
                       // info2='infornacion q poner'
                       img={AlvaroImg}
                     />
                     <MethodRegresion
                       metodo='Regresiones Lineales'
-                      info='Robo'
-                      info2='Violacion Equiparada'
+                      datos2='MSE: 11.946'
                       img={AlvaroImg2}
                     />
                     <MethodAnalisis
@@ -205,19 +205,17 @@ export const Home = () => {
                     <CardDeck  >
                       <MethodGeneral
                         metodo='Analisis'
-                        datos='MSE: 0.141'
-                        datos2='Correlación máxima 7.519'
-                        info='infornacion q poner'
-                        info2='infornacion q poner'
+                        datos='Correlación máxima 0.141'
                         img={AzcapotzalcoImg}
                       />
                       <MethodRegresion
+                        datos2='MSE: 7.519'
                         metodo='Regresiones Lineales'
                         img={AzcapotzalcoImg2}
                       />
                       <MethodAnalisis
                         info='Lesiones'
-                        info2='Robo'
+                        info2='Violacion simple'
                         img={AzcapotzalcoImg3}
                       />
                     </CardDeck>
@@ -233,17 +231,14 @@ export const Home = () => {
                   <div className="card-border" >
                     <CardDeck  >
                       <MethodGeneral
-                        datos='MSE: 4.998'
-                        datos2='Correlación máxima 7.519'
-                        info='infornacion q poner'
-                        info2='infornacion q poner'
+
+                        datos='Correlación máxima 0.409'
+
                         img={BenitoImg2}
                       />
                       <MethodRegresion
-                        metodo='Regresiones Lineales'
-                        datos=' Correlación máxima 0.337'
-                        info='infornacion q poner'
-                        info2='infornacion q poner'
+                        datos2='MSE: 4.998'
+
                         img={BenitoImg}
                       />
                       <MethodAnalisis
@@ -265,20 +260,17 @@ export const Home = () => {
                   <CardDeck  >
                     <MethodGeneral
                       metodo='Analisis'
-                      datos='Correlación máxima:  0.212'
-                      datos2='MSE : 6.563'
                       img={CoyoacanImg2}
-                    />
+                      datos='Correlación máxima:  0.212'
+                      />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE : 6.563'
+
                       img={CoyoacanImg}
                     />
                     <MethodAnalisis
                       info='Amenaza'
-                      info2='Robo'
+                      info2='Lesiones'
                       img={CoyoacanImg3}
                     />
                   </CardDeck>
@@ -295,14 +287,10 @@ export const Home = () => {
                     <MethodGeneral
                       metodo='Analisis'
                       datos='Correlación máxima: 0.216'
-                        datos2='MSE: 2.364'
                       img={CuajimalplaImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 2.364'
                       img={CuajimalplaImg}
                     />
                     <MethodAnalisis
@@ -323,14 +311,10 @@ export const Home = () => {
                     <MethodGeneral
                       metodo='Analisis'
                       datos='Correlación máxima: 0.109'
-                        datos2='Mse: 7.519'
                       img={CuauhtemocImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 22.735'
                       img={CuauhtemocImg}
                     />
                     <MethodAnalisis
@@ -351,21 +335,15 @@ export const Home = () => {
                     <MethodGeneral
                       metodo='Analisis'
                       datos='Correlación máxima: 0.369'
-                      datos2='Mse: 25.542'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
                       img={GustavoImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 25.542'
                       img={GustavoImg}
                     />
                     <MethodAnalisis
                       info='Robo'
-                      info2='N/A'
+                      info2='Violacion equiparada'
                       img={GustavoImg3}
                     />
                   </CardDeck>
@@ -381,16 +359,10 @@ export const Home = () => {
                     <MethodGeneral
                       metodo='Analisis'
                       datos='Correlación máxima: 0.121'
-                      datos2='Mse: 6.351'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
                       img={IztacalcoImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 6.351'
                       img={IztacalcoImg}
                     />
                     <MethodAnalisis
@@ -411,21 +383,15 @@ export const Home = () => {
                     <MethodGeneral
                       metodo='Analisis'
                       datos='Correlación máxima: 0.490'
-                      datos2='Mse: 51.761'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
                       img={IztapalapaImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 51.761'
                       img={IztapalapaImg}
                     />
                     <MethodAnalisis
                       info='Robo'
-                      info2='N/A'
+                      info2='Lesiones'
                       img={IztapalapaImg3}
                     />
                   </CardDeck>
@@ -441,14 +407,10 @@ export const Home = () => {
                     <MethodGeneral
                       metodo='Analisis'
                       datos='Correlación máxima: 0.267'
-                      datos2='Mse: 2.105'
                       img={MagdalenaImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 2.105'
                       img={MagdalenaImg}
                     />
                     <MethodAnalisis
@@ -469,14 +431,10 @@ export const Home = () => {
                     <MethodGeneral
                       metodo='Analisis'
                       datos='Correlación máxima: 0.175'
-                      datos2='Mse: 7.931'
                       img={MiguelImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 7.931'
                       img={MiguelImg}
                     />
                     <MethodAnalisis
@@ -497,19 +455,15 @@ export const Home = () => {
                     <MethodGeneral
                       metodo='Analisis'
                       datos='Correlación máxima: 0.152'
-                      datos2='Mse: 2.079'
                       img={MilpalltaImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 2.079'
                       img={MilpalltaImg}
                     />
                     <MethodAnalisis
-                 info='Robo'
-                 info2='Violacion equiparada'
+                      info='Robo'
+                      info2='Violacion simple'
                       img={MilpalltaImg3}
                     />
                   </CardDeck>
@@ -525,19 +479,15 @@ export const Home = () => {
                     <MethodGeneral
                       metodo='Analisis'
                       datos='Correlación máxima: 0.536'
-                      datos2='Mse: 5.576'
                       img={TlahuacImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 4.576'
                       img={TlahuacImg}
                     />
                     <MethodAnalisis
                       info='Robo'
-                      info2='N/A'
+                      info2='Violacion simple'
                       img={TlahuacImg3}
                     />
                   </CardDeck>
@@ -553,19 +503,15 @@ export const Home = () => {
                     <MethodGeneral
                       metodo='Analisis'
                       datos='Correlación máxima: 0.422'
-                      datos2='Mse: 15.882'
                       img={TlalpanImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 15.882'
                       img={TlalpanImg}
                     />
                     <MethodAnalisis
                       info='Robo'
-                      info2='N/A'
+                      info2='Lesiones'
                       img={TlalpanImg3}
                     />
                   </CardDeck>
@@ -580,19 +526,15 @@ export const Home = () => {
                   <CardDeck  >
                     <MethodGeneral
                       metodo='Analisis'
-                      datos='Correlación máxima: 0.2.36'
-                      datos2='Mse: 20.221'
+                      datos='Correlación máxima: 0.236'
                       img={VenustianoImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 20.221'
                       img={VenustianoImg}
                     />
                     <MethodAnalisis
-                      
+
                       info='Robo'
                       info2='Amenaza'
                       img={VenustianoImg3}
@@ -610,14 +552,10 @@ export const Home = () => {
                     <MethodGeneral
                       metodo='Analisis'
                       datos='Correlación máxima: 0.302'
-                      datos2='Mse: 5.400'
                       img={XochiImg2}
                     />
                     <MethodRegresion
-                      metodo='Regresiones Lineales'
-                      datos=' Correlación máxima 0.337'
-                      info='infornacion q poner'
-                      info2='infornacion q poner'
+                      datos2='MSE: 5.400'
                       img={XochiImg}
                     />
                     <MethodAnalisis

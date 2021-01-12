@@ -12,15 +12,15 @@ class MethodGeneral extends React.Component {
       <>
         <Card border="dark" >
           <Card.Title className="card-tittleContainer" >
-            <div className="card-tittle">{'Análisis estadístico'}</div>
+            <div className="card-tittle">{'Matríz  de correlaciónes'}</div>
           </Card.Title>
-          <div className="" >
+          <div className="prueba-img" >
             <img class="card-img-top " src={this.props.img} alt="Card image cap"></img>
           </div>
           <Card.Body>
             <Card.Text>
-              <p className="card-bodyText" > {this.props.datos} </p>
-              <p className="card-bodyText2" >    {this.props.datos2} </p>
+              <p className="card-bodyText3" > {this.props.datos} </p>
+              
             </Card.Text>
           </Card.Body>
           <Card.Footer>

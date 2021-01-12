@@ -20,8 +20,7 @@ class MethodRegresion extends React.Component {
           </div>
           <Card.Body>
             <Card.Text>
-              {/* <p> {this.props.info} </p>
-              <p> {this.props.info2} </p> */}
+              <p className="card-bodyText" >  {this.props.datos2} </p>
             </Card.Text>
           </Card.Body>
           <Card.Footer>

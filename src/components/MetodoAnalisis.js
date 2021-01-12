@@ -11,7 +11,7 @@ class MethodAnalisis extends React.Component {
     return (
       <Card border="dark" >
       <Card.Title className="card-tittleContainer" >
-        <div className="card-tittle">{'Calculo de correlación'}</div>
+        <div className="card-tittle">{'Tabla de correlaciones'}</div>
       </Card.Title>
       <div className="" >
         <img class="card-imag2" variant="top" src={this.props.img} alt="Card image cap"></img>
