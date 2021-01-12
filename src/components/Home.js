@@ -139,7 +139,7 @@ export const Home = () => {
             <div class="form-group margin-Section">
               <label for="exampleFormControlSelect1" className="section-text" >Seleccione alcaldía</label>
               <select onChange={_updateData} class="form-control" id="exampleFormControlSelect1">
-                <option>Delegacion</option>
+                <option>Alcaldia</option>
                 <option>Alvaro Obregon</option>
                 <option>Azcapotzalco</option>
                 <option>Benito Juarez</option>
@@ -262,7 +262,7 @@ export const Home = () => {
                       metodo='Analisis'
                       img={CoyoacanImg2}
                       datos='Correlación máxima:  0.212'
-                      />
+                    />
                     <MethodRegresion
                       datos2='MSE : 6.563'
 
@@ -578,7 +578,8 @@ export const Home = () => {
           <p className="float-right">
             <a href="#">Subir al inicio</a>
           </p>
-          <p>Aqui van muchos agardecimientos</p>
+          <p>Autores Gustavo Alonso Guerra García
+          Tonatiu Serrano García </p>
 
         </div>
       </footer>

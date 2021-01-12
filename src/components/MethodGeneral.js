@@ -20,7 +20,6 @@ class MethodGeneral extends React.Component {
           <Card.Body>
             <Card.Text>
               <p className="card-bodyText3" > {this.props.datos} </p>
-              
             </Card.Text>
           </Card.Body>
           <Card.Footer>
